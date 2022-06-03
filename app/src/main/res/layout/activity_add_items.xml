@@ -161,7 +161,7 @@
         app:layout_constraintVertical_bias="0.93"></TextView>
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/imageSelector"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="72dp"

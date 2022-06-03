@@ -29,6 +29,14 @@
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/navbar/app/src/main/res/layout/item_entry.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/navbar/app/src/main/res/layout/main_nav_drawer.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/navbar/app/src/main/res/layout/main_toolbar.xml" value="0.35104166666666664" />
+        <entry key="app/src/main/res/layout/activity_add_items.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_add_something.xml" value="0.30932971014492755" />
+        <entry key="app/src/main/res/layout/activity_categories.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_category.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_items.xml" value="0.2658514492753623" />
+        <entry key="app/src/main/res/layout/activity_items_list.xml" value="0.2658514492753623" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_select_category.xml" value="0.3140625" />
       </map>
     </option>
   </component>

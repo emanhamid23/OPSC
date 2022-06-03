@@ -39,7 +39,7 @@ DrawerLayout drawerLayout;
 
     public void ClickCategories(View view){
 
-        redirectActivity(this, Categories.class);
+        redirectActivity(this, SelectCategory.class);
     }
 
     public void Clickwishlist(View view){

@@ -10,15 +10,22 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import models.Category;
 
 public class Categories extends AppCompatActivity {
 
@@ -26,6 +33,7 @@ public class Categories extends AppCompatActivity {
     EditText catname, catgoal;
     Button addcat, viewlist;
     DatabaseReference databaseUsers;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,22 +70,25 @@ public class Categories extends AppCompatActivity {
     private void InsertData(){
         String category = catname.getText().toString();
         String goal = catgoal.getText().toString();
-        String id = databaseUsers.push().getKey();
 
         //USER CLASS
-        User user = new User(category, goal);
-
-        databaseUsers.child("categories").child(id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(Categories.this, "Category added", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    Toast.makeText(Categories.this, "Please fill in all fields!", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        Category cat = new Category(category, goal);
+        db.collection("categories")
+                .add(cat)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(Categories.this, "DocumentSnapshot added with ID: "  + documentReference.getId(), Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(Categories.this, SelectCategory.class);
+                        startActivity(i);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("=============> ", "Error adding document", e);
+                    }
+                });
     }
 
     //TO OPEN

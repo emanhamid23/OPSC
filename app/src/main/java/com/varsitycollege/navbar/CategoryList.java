@@ -16,9 +16,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
+import models.Category;
+
 public class CategoryList extends AppCompatActivity implements RecyclerViewInterface{
     RecyclerView recyclerView;
-    ArrayList<User> list;
+    ArrayList<Category> list;
     DatabaseReference databaseReference;
     MyAdapter adapter;
     Button backbutton;
@@ -47,7 +49,7 @@ public class CategoryList extends AppCompatActivity implements RecyclerViewInter
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    User user = dataSnapshot.getValue(User.class);
+                    Category user = dataSnapshot.getValue(Category.class);
                     list.add(user);
                 }
                 adapter.notifyDataSetChanged();
@@ -72,8 +74,8 @@ public class CategoryList extends AppCompatActivity implements RecyclerViewInter
     @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(CategoryList.this, CategoryActivity.class);
-        intent.putExtra("NAME", list.get(position).getCategoryName());
-        intent.putExtra("GOAL", list.get(position).getCategoryGoal());
+        intent.putExtra("NAME", list.get(position).getName());
+        intent.putExtra("GOAL", list.get(position).getGoal());
         startActivity(intent);
     }
 }

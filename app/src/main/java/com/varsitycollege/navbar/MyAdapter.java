@@ -1,7 +1,6 @@
 package com.varsitycollege.navbar;
 
 import android.content.Context;
-import android.icu.util.ULocale;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,13 +8,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import java.util.Locale;
 
-    public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+import models.Category;
+
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         Context context;
-        ArrayList<User> list;
+        ArrayList<Category> list;
         private final RecyclerViewInterface recyclerViewInterface;
-        public MyAdapter(Context context, ArrayList<User> list, RecyclerViewInterface recyclerViewInterface){
+        public MyAdapter(Context context, ArrayList<Category> list, RecyclerViewInterface recyclerViewInterface){
             this.context = context;
             this.list = list;
             this.recyclerViewInterface = recyclerViewInterface;
@@ -30,9 +30,9 @@ import java.util.Locale;
 
         @Override
         public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
-            User user = list.get(position);
-            holder.name.setText(user.getCategoryName());
-            holder.goal.setText(user.getCategoryGoal());
+            Category user = list.get(position);
+            holder.name.setText(user.getName());
+            holder.goal.setText(user.getGoal());
         }
 
         @Override
