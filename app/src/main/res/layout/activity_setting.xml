@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Setting"
-    android:background="@color/Brown">
+    tools:context=".Setting">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -61,6 +60,7 @@
         android:layout_height="33dp"
         android:text="Settings"
         android:textSize="20dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +83,8 @@
         android:layout_width="102dp"
         android:layout_height="27dp"
         android:text="Your Profile"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.153"
@@ -91,9 +93,11 @@
         app:layout_constraintVertical_bias="0.276"></TextView>
 
     <TextView
-        android:layout_width="102dp"
-        android:layout_height="27dp"
-        android:text="Liked Devices"
+        android:layout_width="137dp"
+        android:layout_height="25dp"
+        android:text="Linked Devices"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -105,6 +109,8 @@
         android:layout_width="102dp"
         android:layout_height="27dp"
         android:text="Account"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -115,7 +121,9 @@
     <TextView
         android:layout_width="102dp"
         android:layout_height="27dp"
+        android:textColor="@color/black"
         android:text="Notifications"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -124,9 +132,11 @@
         app:layout_constraintVertical_bias="0.421"></TextView>
 
     <TextView
-        android:layout_width="111dp"
+        android:layout_width="150dp"
         android:layout_height="28dp"
         android:text="Storage and data"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"

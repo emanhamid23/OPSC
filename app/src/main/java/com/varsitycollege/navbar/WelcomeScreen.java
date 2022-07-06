@@ -47,19 +47,14 @@ DrawerLayout drawerLayout;
         redirectActivity(this, Wishlist.class);
     }
 
-    public void Clickmarketplace(View view){
-
-        redirectActivity(this, Market_place.class);
+    public void ClickGraph(View view){
+        //SEND TO MARKETPLACE PAGE
+        redirectActivity(this, Graph.class);
     }
 
-    public void Clickadditem(View view) {
-
-        redirectActivity(this, AddItems.class);
-    }
-
-    public void Clickthemes(View view) {
-
-        redirectActivity(this, categoryentry.class);
+    public void ClickCoupon(View view) {
+        //SEND TO GRAPH PAGE
+        redirectActivity(this, Coupon.class);
     }
 
     public void Clickusermanual(View view) {
@@ -106,6 +101,5 @@ DrawerLayout drawerLayout;
         Intent intent = new Intent(activity,aClass);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.startActivity(intent);
-
     }
 }

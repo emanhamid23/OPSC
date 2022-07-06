@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register"
-    android:background="@color/Brown">
+    tools:context=".Register">
 
     <EditText
         android:id="@+id/SU_confirmpass"
@@ -19,21 +18,21 @@
         app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.831" />
+        app:layout_constraintVertical_bias="0.78" />
 
     <TextView
         android:id="@+id/ConfirmPass"
-        android:layout_width="186dp"
-        android:layout_height="24dp"
-        android:text="Confrim Password:"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:text="Confirm Password:"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <ImageView
         android:id="@+id/img_logo"
@@ -43,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17"
+        app:layout_constraintVertical_bias="0.089"
         app:srcCompat="@drawable/img" />
 
     <TextView
@@ -52,13 +51,13 @@
         android:layout_height="25dp"
         android:text="Username/Email:"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.628" />
 
     <TextView
         android:id="@+id/textView2"
@@ -73,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444"></TextView>
+        app:layout_constraintVertical_bias="0.375"></TextView>
 
     <EditText
         android:id="@+id/SU_password"
@@ -87,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintVertical_bias="0.701" />
 
     <TextView
         android:id="@+id/password2"
@@ -95,13 +94,13 @@
         android:layout_height="25dp"
         android:text="Password:"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintVertical_bias="0.711" />
 
     <TextView
 
@@ -110,25 +109,25 @@
         android:text="Create a new Account"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
 
-        android:layout_width="285dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text=" Please fill in the following details :"
         android:textColor="@color/black"
-        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintVertical_bias="0.547" />
 
     <EditText
         android:id="@+id/SU_username"
@@ -143,18 +142,20 @@
         app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.616" />
 
     <Button
         android:id="@+id/btn_signup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SIGN  UP"
+        android:layout_width="152dp"
+        android:layout_height="35dp"
+        android:background="@android:color/darker_gray"
+        android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.948"></Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

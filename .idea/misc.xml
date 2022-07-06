@@ -29,14 +29,41 @@
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/navbar/app/src/main/res/layout/item_entry.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/navbar/app/src/main/res/layout/main_nav_drawer.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/navbar/app/src/main/res/layout/main_toolbar.xml" value="0.35104166666666664" />
+        <entry key="app/src/main/res/drawable/custom_progressbar.xml" value="0.2265" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.2265" />
+        <entry key="app/src/main/res/drawable/ic_arrow.xml" value="0.2265" />
+        <entry key="app/src/main/res/drawable/ic_marketplace.xml" value="0.2265" />
+        <entry key="app/src/main/res/layout-v31/activity_categories.xml" value="0.2921195652173913" />
         <entry key="app/src/main/res/layout/activity_add_items.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_add_something.xml" value="0.30932971014492755" />
+        <entry key="app/src/main/res/layout/activity_catagory_list.xml" value="0.2921195652173913" />
         <entry key="app/src/main/res/layout/activity_categories.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_category.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_category_details.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_category_list.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_category_progress.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_categoryentry.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_coupon.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_display_picture.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_graph.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_help.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_item_details.xml" value="0.3880208333333333" />
         <entry key="app/src/main/res/layout/activity_items.xml" value="0.2658514492753623" />
         <entry key="app/src/main/res/layout/activity_items_list.xml" value="0.2658514492753623" />
-        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.32911071777343753" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_market_place.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.2921195652173913" />
         <entry key="app/src/main/res/layout/activity_select_category.xml" value="0.3140625" />
+        <entry key="app/src/main/res/layout/activity_selectionpage.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_showitems.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/activity_user_manual.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/activity_wishlist.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/item_entry.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/main_nav_drawer.xml" value="0.2921195652173913" />
+        <entry key="app/src/main/res/layout/main_toolbar.xml" value="0.2921195652173913" />
       </map>
     </option>
   </component>

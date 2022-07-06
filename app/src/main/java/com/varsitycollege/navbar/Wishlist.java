@@ -10,10 +10,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class Wishlist extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
+    Button justabutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class Wishlist extends AppCompatActivity {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         }
+
     }
 
     //OPEN EACH ITEM FRO NAVBAR
@@ -56,7 +59,7 @@ public class Wishlist extends AppCompatActivity {
 
     public void ClickCategories(View view){
         //SEND TO CATEGORIES PAGE
-        redirectActivity(this, Categories.class);
+        redirectActivity(this, SelectCategory.class);
     }
 
     public void Clickwishlist(View view){
@@ -64,19 +67,14 @@ public class Wishlist extends AppCompatActivity {
         redirectActivity(this, Wishlist.class);
     }
 
-    public void Clickmarketplace(View view){
+    public void ClickGraph(View view){
         //SEND TO MARKETPLACE PAGE
-        redirectActivity(this, Market_place.class);
+        redirectActivity(this, Graph.class);
     }
 
-    public void Clickadditem(View view) {
+    public void ClickCoupon(View view) {
         //SEND TO GRAPH PAGE
-        redirectActivity(this, AddItems.class);
-    }
-
-    public void Clickthemes(View view) {
-        //SEND TO THEMES PAGE
-        redirectActivity(this, WelcomeScreen.class);
+        redirectActivity(this, Coupon.class);
     }
 
     public void Clickusermanual(View view) {
@@ -97,6 +95,9 @@ public class Wishlist extends AppCompatActivity {
     public void Clicklogout(View view) {
         //LOG OUT OF THE APP
         logout(this);
+        //Intent intent = new Intent(Wishlist.this, LogIn.class);
+       // startActivity(intent);
+       // finish();
     }
 
     //METHOD OF LOGGING OUT

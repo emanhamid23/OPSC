@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Wishlist"
-    android:background="@color/Brown">
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,6 +13,7 @@
         android:text="Wishlist is Empty!"
         android:textStyle="italic"
         android:textSize="20dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

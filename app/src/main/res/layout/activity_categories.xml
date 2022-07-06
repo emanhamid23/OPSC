@@ -5,37 +5,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Categories"
-    android:background="@color/Brown">
-
-    <Button
-        android:id="@+id/viewcatlist"
-        android:layout_width="122dp"
-        android:layout_height="46dp"
-        android:text="VIEW LIST"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928"
-       android:background="@drawable/mycolours"></Button>
+    tools:context=".Categories">
 
     <TextView
-        android:layout_width="263dp"
-        android:layout_height="48dp"
-        android:fontFamily="cursive"
-        android:gravity="center"
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Add a Category"
-        android:textColor="@android:color/black"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155"></TextView>
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/getcatname1"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        android:text="Add Category"
+        android:textColor="@color/black"
+        android:textSize="60px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065"></TextView>
 
     <TextView
         android:layout_width="150dp"
@@ -49,7 +48,7 @@
         app:layout_constraintVertical_bias="0.352"
         android:textColor="@android:color/black"
         android:gravity="center"
-        android:textSize="19dp"></TextView>
+        android:textSize="17dp"></TextView>
 
     <TextView
         android:layout_width="150dp"
@@ -62,86 +61,56 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.252"
         android:textColor="@android:color/black"
-        android:textSize="19dp"
+        android:textSize="17dp"
         android:gravity="center"></TextView>
 
     <EditText
         android:id="@+id/catname"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="189dp"
+        android:layout_height="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252"></EditText>
+        app:layout_constraintVertical_bias="0.259"></EditText>
 
     <EditText
         android:id="@+id/catgoal"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="189dp"
+        android:layout_height="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352"></EditText>
+        app:layout_constraintVertical_bias="0.351"></EditText>
 
     <Button
         android:id="@+id/addcat"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="152dp"
+        android:layout_height="35dp"
+        android:background="@android:color/darker_gray"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        android:background="@android:color/darker_gray"></Button>
+        app:layout_constraintVertical_bias="0.521"></Button>
 
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:text="Click to view Category list"
+    <Button
+        android:id="@+id/viewcatlist"
+        android:layout_width="152dp"
+        android:layout_height="35dp"
+        android:background="@android:color/darker_gray"
+        android:text="View list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93"
-        android:textColor="@android:color/black"
-        android:textSize="14dp"></TextView>
-
-    <androidx.drawerlayout.widget.DrawerLayout
-
-        android:id="@+id/drawer_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Categories"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <include layout="@layout/main_toolbar"></include>
-
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start">
-
-            <include layout="@layout/main_nav_drawer"></include>
-
-        </RelativeLayout>
-
-    </androidx.drawerlayout.widget.DrawerLayout>
-
+        app:layout_constraintVertical_bias="0.948"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

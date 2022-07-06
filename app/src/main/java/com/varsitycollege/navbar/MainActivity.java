@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void Clickwishlist(View view){
         //SEND TO WISHLIST PAGE
-        redirectActivity(this, categoryentry.class);
+        redirectActivity(this, Wishlist.class);
     }
 
     public void Clickmarketplace(View view){
@@ -72,11 +72,6 @@ public class MainActivity extends AppCompatActivity {
     public void Clickadditem(View view) {
         //SEND TO GRAPH PAGE
         redirectActivity(this, WelcomeScreen.class);
-    }
-
-    public void Clickthemes(View view) {
-        //SEND TO THEMES PAGE
-        redirectActivity(this, categoryentry.class);
     }
 
     public void Clickusermanual(View view) {

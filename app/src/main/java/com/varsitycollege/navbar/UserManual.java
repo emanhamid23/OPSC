@@ -64,14 +64,14 @@ public class UserManual extends AppCompatActivity {
         redirectActivity(this, Wishlist.class);
     }
 
-    public void Clickmarketplace(View view){
+    public void ClickGraph(View view){
         //SEND TO MARKETPLACE PAGE
-        redirectActivity(this, Market_place.class);
+        redirectActivity(this, Graph.class);
     }
 
-    public void Clickadditem(View view) {
+    public void ClickCoupon(View view) {
         //SEND TO GRAPH PAGE
-        redirectActivity(this, AddItems.class);
+        redirectActivity(this, Coupon.class);
     }
 
     public void Clickthemes(View view) {

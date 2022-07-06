@@ -9,6 +9,8 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,22 +19,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Navbar">
         <activity
+            android:name=".Coupon"
+            android:exported="false" />
+        <activity
+            android:name=".Graph"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ItemDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Showitems"
+            android:exported="false" />
+        <activity
             android:name=".SelectCategory"
-            android:exported="false" />
-        <activity
-            android:name=".AddSomething"
-            android:exported="false" />
-        <activity
-            android:name=".ItemsList"
-            android:exported="false" />
-        <activity
-            android:name=".ItemsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CategoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CategoryList"
             android:exported="false" />
         <activity
             android:name=".AddItems"
@@ -51,9 +53,6 @@
             android:exported="false" />
         <activity
             android:name=".Wishlist"
-            android:exported="false" />
-        <activity
-            android:name=".categoryentry"
             android:exported="false" />
         <activity
             android:name=".Register"

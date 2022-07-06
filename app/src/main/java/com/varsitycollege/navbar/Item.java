@@ -2,6 +2,7 @@ package com.varsitycollege.navbar;
 
 import android.net.Uri;
 
+//ITEM CLASS
 public class Item {
 
     String category;
@@ -31,5 +32,4 @@ public class Item {
     public String getDescriptionItem(){return descriptionItem;}
 
     public String getDateChoosen(){return dateChoosen;}
-
 }

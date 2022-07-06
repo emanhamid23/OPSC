@@ -5,37 +5,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Categories"
-    android:background="@color/Brown">
+    tools:context=".Categories">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="31dp"
         android:text="Upload Picture:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.615"></TextView>
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="149dp"
+        android:layout_height="31dp"
         android:text="Date:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527"></TextView>
+        app:layout_constraintVertical_bias="0.54"></TextView>
 
     <EditText
-        android:layout_width="150dp"
+        android:layout_width="202dp"
         android:layout_height="50dp"
         android:id="@+id/itemdate"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.831"
@@ -46,79 +50,87 @@
     <TextView
         android:id="@+id/textView6"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="31dp"
         android:text="Category Name:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441"></TextView>
+        app:layout_constraintVertical_bias="0.454"></TextView>
 
     <EditText
         android:id="@+id/category_name"
-        android:layout_width="150dp"
+        android:layout_width="202dp"
         android:layout_height="50dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441"></EditText>
-
-
-
-    <Button
-        android:id="@+id/viewitemlist"
-        android:layout_width="122dp"
-        android:layout_height="46dp"
-        android:text="VIEW LIST"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928"></Button>
+        app:layout_constraintVertical_bias="0.439"></EditText>
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Add an Item"
-        android:textSize="20dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155"></TextView>
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/getcatname1"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065"></TextView>
 
     <TextView
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="31dp"
         android:text="Item Description:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352"></TextView>
+        app:layout_constraintVertical_bias="0.361"></TextView>
 
     <TextView
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="31dp"
         android:text="Item Name:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252"></TextView>
+        app:layout_constraintVertical_bias="0.268"></TextView>
 
     <EditText
         android:id="@+id/itemname"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="202dp"
+        android:layout_height="46dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.831"
@@ -127,51 +139,65 @@
         app:layout_constraintVertical_bias="0.252"></EditText>
 
     <EditText
+        android:id="@+id/getgoals"
+        android:layout_width="29dp"
+        android:layout_height="38dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"></EditText>
+
+    <EditText
         android:id="@+id/itemdesc"
-        android:layout_width="150dp"
+        android:layout_width="202dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352"></EditText>
+        app:layout_constraintVertical_bias="0.343"></EditText>
 
     <Button
         android:id="@+id/btnAddItem"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Add"
+        android:layout_width="152dp"
+        android:layout_height="35dp"
+        android:background="@android:color/darker_gray"
+        android:text="Add Item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845"></Button>
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:text="Click to view items list"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93"></TextView>
+        app:layout_constraintVertical_bias="0.945"></Button>
 
     <ImageView
         android:id="@+id/imageSelector"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginBottom="160dp"
-        android:src="@mipmap/ic_launcher"
+        android:layout_width="68dp"
+        android:layout_height="47dp"
+        android:src="@drawable/ic_camera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.618" />
 
+    <Button
+        android:id="@+id/btnviewitemlist"
+        android:layout_width="152dp"
+        android:layout_height="35dp"
+        android:background="@android:color/darker_gray"
+        android:text="View Items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.945"></Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,10 +10,12 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,169 +31,91 @@ import models.Category;
 
 public class Categories extends AppCompatActivity {
 
+    //GETTING ALL VALUES
     DrawerLayout drawerLayout;
     EditText catname, catgoal;
     Button addcat, viewlist;
+
+    //CONNECT TO FIREBASE - FIRESTORE
     DatabaseReference databaseUsers;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+    //START
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
 
+        //FIND VIEW BY ID
         drawerLayout = findViewById(R.id.drawer_layout);
-
-        //UPLOADING TO FIREBASE
         viewlist = findViewById(R.id.viewcatlist);
         addcat = findViewById(R.id.addcat);
         catname = findViewById(R.id.catname);
         catgoal = findViewById(R.id.catgoal);
+
+        //FIREBASE CONN
         databaseUsers = FirebaseDatabase.getInstance().getReference();
 
         //ADDS DATA TO FB
-        addcat.setOnClickListener(new View.OnClickListener() {
+        addcat.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                InsertData();
+            public void onClick(View view)
+            {
+                if(TextUtils.isEmpty(catname.getText().toString()))
+                {
+                    catname.setError("This field can't be empty");
+                }
+                else if(TextUtils.isEmpty(catgoal.getText().toString()))
+                {
+                    catgoal.setError("This field can't be empty");
+                }
+                else{
+                    //METHOD TO INSERT DATA
+                    InsertData();
+                }
             }
         });
 
-        //SHOWS LIST OF CATEGORIES
-        viewlist.setOnClickListener(new View.OnClickListener() {
+        //SHOWS A LIST OF CATEGORIES
+        viewlist.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Categories.this, CategoryList.class);
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(Categories.this, SelectCategory.class);
                 startActivity(intent);
             }
         });
     }
 
-    private void InsertData(){
+    //INSERT DATA TO FB METHOD
+    private void InsertData()
+    {
         String category = catname.getText().toString();
-        String goal = catgoal.getText().toString();
+        Integer goal = Integer.parseInt(catgoal.getText().toString());
 
         //USER CLASS
         Category cat = new Category(category, goal);
         db.collection("categories")
                 .add(cat)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>()
+                {
                     @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(Categories.this, "DocumentSnapshot added with ID: "  + documentReference.getId(), Toast.LENGTH_SHORT).show();
+                    public void onSuccess(DocumentReference documentReference)
+                    {
+                        Toast.makeText(Categories.this, "New Category Added!", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(Categories.this, SelectCategory.class);
                         startActivity(i);
                     }
                 })
-                .addOnFailureListener(new OnFailureListener() {
+                .addOnFailureListener(new OnFailureListener()
+                {
                     @Override
-                    public void onFailure(@NonNull Exception e) {
+                    public void onFailure(@NonNull Exception e)
+                    {
                         Log.w("=============> ", "Error adding document", e);
                     }
                 });
-    }
-
-    //TO OPEN
-    //OPEN NAV DRAWER
-    public void Click_menu(View view){
-        openDrawer(drawerLayout);
-    }
-
-    public static void openDrawer(DrawerLayout drawerLayout) {
-        //METHOD FOR OPENING NAV
-        drawerLayout.openDrawer(GravityCompat.START);
-    }
-
-    //TO CLOSE
-    //CLICK LOGO TO CLOSE NAVBAR
-    public void ClickLogo(View view){
-        closeDrawer(drawerLayout);
-    }
-
-    public static void closeDrawer(DrawerLayout drawerLayout) {
-        //CLOSE NAV METHOD
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
-    }
-
-    //OPEN EACH ITEM FROM NAVBAR
-    //CLICK HOME
-    public void ClickHome(View view){
-        //SEND TO HOME PAGE
-        redirectActivity(this, WelcomeScreen.class);
-    }
-
-    public void ClickCategories(View view){
-        //SEND TO CATEGORIES PAGE
-        redirectActivity(this, Categories.class);
-    }
-
-    public void Clickwishlist(View view){
-        //SEND TO WISHLIST PAGE
-        redirectActivity(this, Wishlist.class);
-    }
-
-    public void Clickmarketplace(View view){
-        //SEND TO MARKETPLACE PAGE
-        redirectActivity(this, Market_place.class);
-    }
-
-    public void Clickadditem(View view) {
-        //SEND TO GRAPH PAGE
-        redirectActivity(this, AddItems.class);
-    }
-
-    public void Clickthemes(View view) {
-        //SEND TO THEMES PAGE
-        redirectActivity(this, WelcomeScreen.class);
-    }
-
-    public void Clickusermanual(View view) {
-        //SEND TO USERMANUAL PAGE
-        redirectActivity(this, UserManual.class);
-    }
-
-    public void Clickhelp(View view) {
-        //SEND TO HELP PAGE
-        redirectActivity(this, Help.class);
-    }
-
-    public void Clicksettings(View view) {
-        //SEND TO SETTINGS
-        redirectActivity(this, Setting.class);
-    }
-
-    public void Clicklogout(View view) {
-        //LOG OUT OF THE APP
-        logout(this);
-    }
-
-    //METHOD OF LOGGING OUT
-    public static void logout(Activity activity){
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle("Log Out");
-        builder.setMessage("Are you sure you want to log out ? ");
-        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                activity.finishAffinity();
-                System.exit(0);
-            }
-        });
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-            }
-        });
-    }
-
-    //REDIRECTING METHOD
-    private static void redirectActivity(Activity activity, Class aClass) {
-        Intent intent = new Intent(activity,aClass);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        activity.startActivity(intent);
-
     }
 }
